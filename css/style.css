@@ -1,0 +1,71 @@
+/* Основные стили для слайдера */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.slider {
+    display: flex;
+    position: relative;
+}
+
+.slide {
+    min-width: 100%;
+    padding: 40px;
+    display: none; /* скрываем все слайды по умолчанию */
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    display: flex; /* показываем только активный слайд */
+    opacity: 1;
+}
+
+.slide-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
